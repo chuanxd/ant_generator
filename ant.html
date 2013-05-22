@@ -1,0 +1,38 @@
+<html lang="zh-TW">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ant Generator</title>
+	<meta name="keywords" content="taiwan,weather"/>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<style>
+		#headbar{font-family: "PT Mono",Courier,"微軟正黑體","Microsoft JhengHei";}
+		#ant_box {height: 43px;}
+		#ant_result {font-size: 60px;}
+	</style>
+</head>
+<body>
+	<div id="headbar" class="navbar navbar-inverse"><h1>Ant Generator<h1></div>
+	<div class="input-append">
+	<input id="ant_box" type="text" placeholder="҉A҉N҉T҉" class="input-xxlarge" placeholder=".input-xxlarge">
+	<button class="btn btn-large btn-primary" onclick="document.getElementById('ant_result').innerHTML=ant(document.getElementById('ant_box').value)" type="button">҉A҉N҉T҉</button>
+	</div>
+	<div id="ant_result"></div>
+	<script>
+		var m="&#1161;";
+		function ant(str){
+		  var t= ""+m;
+		  for(var i=0; i < str.length; i++){
+		     t+=str.charAt(i)+m;
+		  }
+		  return t;
+		}
+</script>
+</body>
+</html>
